@@ -6,16 +6,16 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
         Scanner input = new Scanner (System.in);
-        String nama, nim, message ;
+        String nama, npm, message ;
         char grade ;
         int n_akhir;
         long nilai ;
         while (true){
             System.out.print("Masukan nama : ");
             nama = input.nextLine();
-            System.out.print("Masukan NIM (2155XXXXXXX) : ");
-            nim = input.nextLine();
-            nilai = Long.parseLong(nim);
+            System.out.print("Masukan NPM (2155XXXXXXX) : ");
+            npm = input.nextLine();
+            nilai = Long.parseLong(npm);
             n_akhir =   (int)(nilai%100);
             if(n_akhir >= 80){
                 grade = '\0';
@@ -25,7 +25,7 @@ public class App {
                 else if (n_akhir >= 80 && n_akhir < 90){
                     grade = 'B';
                 }
-                 System.out.println("\n"+nama+" dengan NIM "+nim+" memiliki nilai akhir "+n_akhir+" = ("+grade+")"+""
+                 System.out.println("\n"+nama+" dengan NIM "+npm+" memiliki nilai akhir "+n_akhir+" = ("+grade+")"+""
                         + "\n dan dinyatakan Lulus");
                  break;
             }else{
@@ -42,7 +42,7 @@ public class App {
                     grade = 'E';
                     message = "Tidak Lulus";
                 }
-                System.out.println("\n"+nama+" dengan NIM "+nim+" memiliki nilai akhir "+n_akhir+" = ("+grade+")"+"" + "\n dan dinyatakan  ("+message+") Coba Inputkan Nilai kembali \n");        
+                System.out.println("\n"+nama+" dengan NIM "+npm+" memiliki nilai akhir "+n_akhir+" = ("+grade+")"+"" + "\n dan dinyatakan  ("+message+") Coba Inputkan Nilai kembali \n");        
             }
         }
     }
